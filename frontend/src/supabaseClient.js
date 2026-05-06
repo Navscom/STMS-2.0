@@ -1,7 +1,6 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js'
 
-// These are your specific project credentials
-const supabaseUrl = 'https://pojtdpnrurntlsivxnyn.supabase.co';
-const supabaseAnonKey = 'sb_publishable_jsV7FrIzfJeRpZDJiVZU3g_nEfdFfmS';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
